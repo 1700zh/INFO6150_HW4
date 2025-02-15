@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Results - Vallejo Public Library</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian&family=Noto+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* 搜索结果页面专用简单样式 */
+    .search-results-container {
+      max-width: 800px;
+      margin: 150px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      font-family: 'Noto Serif', serif;
+    }
+    .search-results-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-family: 'Noto Sans Georgian', sans-serif;
+    }
+    .result-item {
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  <!-- 导航栏（同 index.html） -->
+  <div id="navbar">
+    <div class="brand">
+      <img src="Logo.png" alt="Logo">
+      <span class="brand-text">Vallejo Public Library</span>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="#visit">Visit Us</a>
+      <a href="#reserve">Reserve</a>
+      <a href="book.html">Catalog</a>
+      <a href="#mylibrary">My library card</a>
+      <a href="login.html">Login/Register</a>
+    </div>
+  </div>
+
+  <div class="search-results-container">
+    <h2>Search Results</h2>
+    <div id="search-results"></div>
+  </div>
+
+  <script>
+    // 获取 URL 参数中的 query 值
+    const params = new URLSearchParams(window.location.search);
+    const query = params.get('query');
+
+    const resultsContainer = document.getElementById('search-results');
+
+    if (query) {
+      resultsContainer.innerHTML = `<p>You searched for: <strong>${query}</strong></p>`;
+      // 以下是模拟的搜索结果，你可以根据实际情况替换成真实数据
+      const dummyResults = [
+        'Result 1 for ' + query,
+        'Result 2 for ' + query,
+        'Result 3 for ' + query,
+      ];
+      const ul = document.createElement('ul');
+      dummyResults.forEach(item => {
+        const li = document.createElement('li');
+        li.className = 'result-item';
+        li.textContent = item;
+        ul.appendChild(li);
+      });
+      resultsContainer.appendChild(ul);
+    } else {
+      resultsContainer.innerHTML = '<p>No search query provided.</p>';
+    }
+  </script>
+</body>
+</html>

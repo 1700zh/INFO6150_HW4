@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>固定导航栏示例</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian&family=Noto+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Nav -->
+  <div id="navbar">
+    <div class="brand">
+      <img src="Logo.png" alt="Logo">
+      <span class="brand-text">Vallejo Public Library</span>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="#visit">Visit Us</a>
+      <a href="#reserve">Reserve</a>
+      <a href="book.html">Catalog</a>
+      <a href="#mylibrary">My library card</a>
+      <a href="login.html">Login/Register</a>
+    </div>
+  </div>
+
+  <!-- Homepage background -->
+  <div class="homepage-background">
+    <img src="homepage_background.jpg" alt="Homepage Background">
+    <!-- search.html -->
+    <form class="search-container" action="search.html" method="GET">
+      <input type="text" name="query" placeholder="Search books..." required>
+      <button type="submit">Search</button>
+    </form>
+    <!-- info -->
+    <div class="info-bar">
+      <ul>
+        <li>Opening Hours</li>
+        <li>Library Address</li>
+        <li>Email Address</li>
+        <li>Phone Number</li>
+        <li>Library Card Application Form</li>
+        <li>Q&A</li>
+      </ul>
+    </div>
+    <!-- news -->
+    <div class="news-bar">
+      <h2>News</h2>
+      <div class="news-images">
+        <img src="News1.jpg" alt="News 1">
+        <img src="News2.jpg" alt="News 2">
+        <img src="News3.jpg" alt="News 3">
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

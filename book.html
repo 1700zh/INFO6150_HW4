@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Page</title>
+  <!-- 使用与 index.html 相同的 Google Fonts 和样式文件 -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian&family=Noto+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 导航栏 -->
+  <div id="navbar">
+    <div class="brand">
+      <img src="Logo.png" alt="Logo">
+      <span class="brand-text">Vallejo Public Library</span>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="#visit">Visit Us</a>
+      <a href="#reserve">Reserve</a>
+      <a href="book.html">Catalog</a>
+      <a href="#mylibrary">My library card</a>
+      <a href="login.html">Login/Register</a>
+    </div>
+  </div>
+
+  <!-- 书籍页面内容 -->
+  <div class="book-container">
+    <!-- 分类栏 -->
+    <div class="category-bar">
+      <h2>Book Categories</h2>
+      <ul>
+        <li><button class="category-button">Fiction</button></li>
+        <li><button class="category-button">History</button></li>
+        <li><button class="category-button">Technology</button></li>
+        <li><button class="category-button">Art</button></li>
+        <li><button class="category-button">Children</button></li>
+        <li><button class="category-button">Literature</button></li>
+      </ul>
+    </div>
+    <!-- 主要内容区域 -->
+    <div class="book-content">
+      <!-- 书籍图片及拍摄者信息 -->
+      <div class="book-image-container">
+        <img src="Fourth Wing.jpg" alt="Fourth Wing" class="book-image">
+        <p class="photo-credit">shot by Haoyin Zheng</p>
+      </div>
+      <!-- 图书信息区域 -->
+      <div class="book-info">
+        <h2>Book Name: Fourth Wing</h2>
+        <p><strong>Author:</strong> Rebecca Yarros</p>
+        <p><strong>Year of Publish:</strong> 2023</p>
+        <p><strong>Country of Publish:</strong> United States</p>
+        <p>
+          <strong>Story Summary:</strong>
+          A thrilling fantasy novel set in a war-torn world of dragons, politics, and forbidden romance.
+          It follows a fierce protagonist who must navigate danger, alliances, and her own destiny.
+        </p>
+        <p><strong>ISBN:</strong> 978-1649374042</p>
+        <p><strong>Availability:</strong> 3/5</p>
+        <!-- 按钮区域 -->
+        <div class="book-buttons">
+          <button class="reserve-button">Reserve Now!</button>
+          <button class="apply-card-button">Click here to apply a library card</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
